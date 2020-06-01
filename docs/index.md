@@ -20,10 +20,10 @@ Next, since pickled objects can only be stored in a binary file, use the open() 
 
 Part of this week’s assignment was to search the web for examples of how to use Python’s Pickling features. A couple of websites that helped me better understand Python’s Pickling features include:
 
-- Journal Dev - Python Pickle Example https://www.journaldev.com/15638/python-pickle-example (external site)
-- Data Camp - Pickle in Python: Object Serialization https://www.datacamp.com/community/tutorials/pickle-python-tutorial (external site)
+- [Journal Dev - Python Pickle Example (external site)](https://www.journaldev.com/15638/python-pickle-example "Journal Dev - Python Pickle Example")
+- [Data Camp - Pickle in Python: Object Serialization (external site)](https://www.datacamp.com/community/tutorials/pickle-python-tutorial "Data Camp - Pickle in Python: Object Serialization")
 
-There were others that I reviewed including Python’s Standard Library (https://docs.python.org/3/library/pickle.html - external site) but found the two referenced above were concisely written and easiest to read, which helped me to better grasp this topic and not get confused by other topics that we have not yet covered.  In addition to being easy to read, I liked the embedded short video by Journal Dev showing execution of the pickling features.
+There were others that I reviewed including [Python’s Standard Library](https://docs.python.org/3/library/pickle.html "Python's Standard Library") but found the two referenced above were concisely written and easiest to read, which helped me to better grasp this topic and not get confused by other topics that we have not yet covered.  In addition to being easy to read, I liked the embedded short video by Journal Dev showing execution of the pickling features.
 
 ## Exception Handling in Python
 When we write programs, we should think about exceptions that may be introduced when other people use the programs, and handle the exceptions that are raised to guard against potential failures causing the program to exit abruptly. For example, if the user entered a string object while you were expecting an integer object as input, we can use the try statement and except clause to catch the exception and inform the user that something went wrong by specifying the error in a user-friendly way.  
@@ -31,13 +31,13 @@ When we write programs, we should think about exceptions that may be introduced 
 Exception is a built-in python class that can catch any type of error, but specific errors can be caught using more specific exception classes. Figure 2 shows a list of Python’s Built-In Exceptions. A simple way to handle exceptions is to use the try statement with an except clause. The try statement will run a block of code that could potentially raise an exception. The except clause will execute a block of statements only if an exception is raised. 
 
 ![Figure 2 Python's Built-in Exceptions](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure2.png "Figure 2. Python's  Built In Exceptions")
-###### Figure 2. Python's Built-In Exceptions (Source: *https://docs.python.org/3/library/exceptions.html#exception-hierarchy*)
+###### Figure 2. Python's Built-In Exceptions ([Source](https://docs.python.org/3/library/exceptions.html#exception-hierarchy))
 
 A few of websites that helped me better understand Python’s Exception Handling features include:
 
-- Python’s Standard Library - Built-in Exceptions https://docs.python.org/3/library/exceptions.html#
-- Journal Dev - Python Exception Handling – Python try except https://www.journaldev.com/14444/python-exception-handling-try-except (external site)
-- Data Camp - Exception and Error Handling in Python https://www.datacamp.com/community/tutorials/exception-handling-python  (external site)
+- [Python’s Standard Library - Built-in Exceptions (external site)](https://docs.python.org/3/library/exceptions.html#)
+- [Journal Dev - Python Exception Handling – Python try except (external site)](https://www.journaldev.com/14444/python-exception-handling-try-except)
+- [Data Camp - Exception and Error Handling in Python (external site)](https://www.datacamp.com/community/tutorials/exception-handling-python)
 
 Python’s Standard Library document provided a lot of detailed information regarding the BaseException and Exception classes and helped me to have a clearer understanding of the exception hierarchy. Again, I found the Journal Dev and Data Camp tutorials well-written and easy to understand, and they both introduced me to new features I did not previously know about, including using else and finally. I found the Exception Handling example on Journal Dev’s site easy to follow especially with the programmer’s comments included in the example script. 
 
