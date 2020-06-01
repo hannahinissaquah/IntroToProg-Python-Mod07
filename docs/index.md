@@ -14,7 +14,7 @@ Pickle uses a process known as “serialization” to convert an object in memor
 To use pickle, first import the pickle module as shown in Figure 1.
 
 ![Figure 1 Screenshot of import pickle](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure1.png "Figure 1. Screenshot of import pickle")
-###### Figure 1. Screenshot of import pickle
+###### *Figure 1. Screenshot of import pickle*
 
 Next, since pickled objects can only be stored in a binary file, use the open() function to open a binary file (.dat extension) for writing and pass “wb” as the file access mode. If the file exists, its contents will be overwritten. If the file doesn’t exist, it is created. You can also use “ab” to append a binary file; if the file exists, new data is appended to it and if the file doesn’t exist, it’s created. Once the file is opened for writing, you can use pickle.dump(), which takes two arguments: the object you want to pickle and the file in which to store it. Lastly, close the file using the close() function. To retrieve the pickled file back into Python, use the open() function again, but this time with “rb” as the file access mode. Next, use pickle.load(), which takes one argument: the file from which to load the pickled object. 
 
@@ -31,7 +31,7 @@ When we write programs, we should think about exceptions that may be introduced 
 Exception is a built-in python class that can catch any type of error, but specific errors can be caught using more specific exception classes. Figure 2 shows a list of Python’s Built-In Exceptions. A simple way to handle exceptions is to use the try statement with an except clause. The try statement will run a block of code that could potentially raise an exception. The except clause will execute a block of statements only if an exception is raised. 
 
 ![Figure 2 Python's Built-in Exceptions](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure2.png "Figure 2. Python's  Built In Exceptions")
-###### Figure 2. Python's Built-In Exceptions ([Source](https://docs.python.org/3/library/exceptions.html#exception-hierarchy))
+###### *Figure 2. Python's Built-In Exceptions ([Source](https://docs.python.org/3/library/exceptions.html#exception-hierarchy)*)
 
 A few of websites that helped me better understand Python’s Exception Handling features include:
 
@@ -46,7 +46,7 @@ Python’s Standard Library document provided a lot of detailed information rega
 First, I created a new PyCharm project that uses the \_PythonClass\Assignment07 folder as its location. Within the project, I created a new Python file called “Assignment07.py”. Figure 3 shows a screenshot of my script header.
 
 ![Figure 3 Screenshot of Assignment07.py - Script Header](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure3.png "Figure 3 Screenshot of Assignment07.py - Script Header")
-###### Figure 3. Screenshot of Assignment07.py - Script Header
+###### *Figure 3. Screenshot of Assignment07.py - Script Header*
 
 ### Using the Pickle Module
 
@@ -99,84 +99,99 @@ def manage_file(file_name, mode, list_of_data = None): # list_of_data is optiona
     else:
         print('No matching mode option')
 ```
-###### Figure 4. Script Pickling Features (note: image replaced with sample code using backtick (\`) symbol)
+###### *Figure 4. Script Pickling Features (note: image replaced with sample code using backtick (\`) symbol)*
 
 ### Exception Handling
 
 Figure 5 shows a screenshot of the script’s Presentation section, which includes more examples of Exception handling. If the user chooses Option 1, this will open a file for reading. If no file exists, Python will stop running and display an error message, which is called FileNotFoundError. To handle this exception, I used the try-except. I tell the program to try opening the file in read-mode. If it raises the FileNotFoundError, the except block code will be executed, which will inform the user of the error so the user can take corrective action. In addition to printing my own custom error messages, I am also showing how to capture the Exception’s argument in a variable e and to display the built-in python error. Below the specific exception FileNotFoundError, I also included the non-specific error, which should always come after the specific exception, if it is going to be used. It is better to catch specific exception classes, as using the generalized exception class is not very useful for handling.
 
 ![Figure 5 Screenshot of Presentation Section with Exception Handling](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure5.png "Figure 5 Screenshot of Presentation Section with Exception Handling")
-###### Figure 5. Screenshot of Presentation Section with Exception Handling
+###### *Figure 5. Screenshot of Presentation Section with Exception Handling*
 
 If the user chooses Option 2 (add data to the reading log), the user may not enter a value or may enter an incorrect value type (string vs integer). If the user does not enter a value for the book name, a custom error will be raised. In addition to raising a custom error, I have created a custom exception class, which derives its code from Python’s Exception class. Figure 6 shows a screenshot of the custom exception class that was created. Since the variable intTime is expecting an integer value, if the user enters a string or non-integer value, the ValueError exception is raised and the except block is executed. The while loop will continue until the try block is successfully executed.
 
 ![Figure  6 Screenshot of Custom Exception Class](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure6.png "Figure 6 Screenshot of Custom Exception Class")
-###### Figure 6. Screenshot of Custom Exception Class
+###### *Figure 6. Screenshot of Custom Exception Class*
 
 ### Running the Script
 
 When the program starts, a menu of options will appear. Figure 7 shows the script running in PyCharm and Figure 8 shows the script running in the Command Window.
 
 ![Figure  7 PyCharm - Menu of Options](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure7.png "Figure 7 PyCharm - Menu of Options")
-###### Figure 7. PyCharm - Menu of Options
+###### *Figure 7. PyCharm - Menu of Options*
+
 
 ![Figure  8 Command Window - Menu of Options](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure8.png "Figure 8 Command Window - Menu of Options")
-###### Figure 8. Command Window - Menu of Options
+###### *Figure 8. Command Window - Menu of Options*
+
 
 If user selects Option 1 and no file is found, an error message will appear and return to the main menu. Figure 9 shows the exception in PyCharm and Figure 10 shows the exception in the Command Window.
 
 ![Figure  9 PyCharm – FileNotFoundError](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure9.png "Figure 9 PyCharm – FileNotFoundError")
-###### Figure 9. PyCharm – FileNotFoundError
+###### *Figure 9. PyCharm – FileNotFoundError*
+
 
 ![Figure  10 Command Window – FileNotFoundError](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure10.png "Figure 10 Command Window – FileNotFoundError")
-###### Figure 10. Command Window – FileNotFoundError
+###### *Figure 10. Command Window – FileNotFoundError*
+
 
 Figure 11 (PyCharm) and Figure 12 (Command Window) show an example of the user selecting Option 2, which will create a new binary file (in append mode) and allow the user to add new data using pickle.dump(). After the new data is entered, if Option 1 is selected, the program will retrieve data from the binary file by using pickle.load().
 
 ![Figure  11 PyCharm - Option 2 and Executing Pickling](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure11.png "Figure 11 PyCharm - Option 2 and Executing Pickling")
-###### Figure 11. PyCharm - Option 2 and Executing Pickling
+###### *Figure 11. PyCharm - Option 2 and Executing Pickling*
+
 
 ![Figure  12 Command Window - Option 2 and Executing Pickling](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure12.png "Figure 12 Command Window - Option 2 and Executing Pickling")
-###### Figure 12. Command Window - Option 2 and Executing Pickling
+###### *Figure 12. Command Window - Option 2 and Executing Pickling*
+
 
 If the user selects Option 2 but does not enter a value for the book name, a custom error message is displayed. Figure 13 shows the custom error message in PyCharm and Figure 14 shows the custom error message displayed in the Command Window.
 
 ![Figure  13 PyCharm - Option 2 and Custom Exception Class](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure13.png "Figure 13 PyCharm - Option 2 and Custom Exception Class")
-###### Figure 13. PyCharm - Option 2 and Custom Exception Class
+###### *Figure 13. PyCharm - Option 2 and Custom Exception Class*
+
 
 ![Figure  14 Command Window - Option 2 and Custom Exception Class](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure14.png "Figure 14 Command Window - Option 2 and Custom Exception Class")
-###### Figure 14. Command Window - Option 2 and Custom Exception Class
+###### *Figure 14. Command Window - Option 2 and Custom Exception Class*
+
 
 If the number of minutes is not an integer, a custom error message is displayed. Figure 15 shows the custom error message in PyCharm and Figure 16 shows the custom error message displayed in the Command Window.
 
 ![Figure  15 PyCharm - Option 2 and ValueError Exception Displaying Custom Error Message](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure15.png "Figure 15 PyCharm - Option 2 and ValueError Exception Displaying Custom Error Message")
-###### Figure 15. PyCharm - Option 2 and ValueError Exception Displaying Custom Error Message
+###### *Figure 15. PyCharm - Option 2 and ValueError Exception Displaying Custom Error Message*
+
 
 ![Figure  16 Command Window - Option 2 and ValueError Exception Displaying Custom Error Message](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure16.png "Figure 16 Command Window - Option 2 and ValueError Exception Displaying Custom Error Message")
-###### Figure 16. Command Window - Option 2 and ValueError Exception Displaying Custom Error Message
+###### *Figure 16. Command Window - Option 2 and ValueError Exception Displaying Custom Error Message*
+
 
 Selecting Option 3 will either create a new file or overwrite an existing file. Figure 17 (PyCharm) and Figure 18 (Command Window) show Option 3 being selected and then Option 1 is selected to display the reading log, which now shows only the header row containing the values “Book” and “Minutes”.
 
 ![Figure  17 PyCharm - Option 3 then Option 1](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure17.png "Figure 17 PyCharm - Option 3 then Option 1")
-###### Figure 17. PyCharm - Option 3 then Option 1
+###### *Figure 17. PyCharm - Option 3 then Option 1*
+
 
 ![Figure  18 Command Window - Option 3 then Option 1](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure18.png "Figure 18 Command Window - Option 3 then Option 1")
-###### Figure 18. Command Window - Option 3 then Option 1
+###### *Figure 18. Command Window - Option 3 then Option 1*
+
 
 If Option 4 is selected, a message appears and instructs the user to press the Enter key to exit. Figure 19 shows Option 4 being selected in PyCharm and Figure 20 shows Option 4 being selected in the Command Window.
 
 ![Figure  19 PyCharm - Option 4](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure19.png "Figure 19 PyCharm - Option 4")
-###### Figure 19. PyCharm - Option 4
+###### *Figure 19. PyCharm - Option 4*
+
 
 ![Figure  20 Command Window - Option 4](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure20.png "Figure 20 Command Window - Option 4")
-###### Figure 20. Command Window - Option 4
+###### *Figure 20. Command Window - Option 4*
+
 
 ### Verifying the Script Worked
 
 I verified that the script worked by opening the ReadingLog.dat file in a text editor located in the \_PythonClass\Assignment07 folder. Figure 21 shows a screenshot of its contents.
 
 ![Figure  21 Screenshot of ReadingLog.dat](https://hannahinissaquah.github.io/IntroToProg-Python-Mod07/Figure21.png "Figure 21 Screenshot of ReadingLog.dat")
-###### Figure 21. Screenshot of ReadingLog.dat
+###### *Figure 21. Screenshot of ReadingLog.dat*
+
 
 ## Summary
 
